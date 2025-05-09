@@ -42,6 +42,18 @@ def umTexto (solicitacao, mensagem, valido):
     while not digitouDireito:
         txt=input(solicitacao)
 
+        '''
+        indice = 0
+        contemNumeros = False
+    
+        while indice < len(txt):
+            if txt[indice] >= '0' or <= '9':
+                contemNumeros = True
+        if (contemNumeros):
+            print("O nome só pode conter letras")
+            
+            indice++ # indice+= 1'''
+
         if txt not in valido:
             print(mensagem,'- Favor redigitar...')
         else:
