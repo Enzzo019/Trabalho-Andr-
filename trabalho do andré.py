@@ -101,6 +101,29 @@ def cadastrar (agd):
             digitouDireito=True
             
     aniversario=input('Aniversário: ')
+    def verificar_aniversário(aniversario):
+    data_válida=False
+    while not data_válida:
+        
+        dia, mes, ano= int(dia), int(mes), int(ano)
+        
+        datas_especiais=["29/02"]
+        meses_30dias=["04","06",'09','11']
+        meses_31dias=["01",'03','05','07','08','10','12']
+        
+        if mes<1 and mes>12:
+            print('Mês da data está inválido, tente novamente')
+        
+        
+        if aniversario in datas_especiais:
+            print('Data não valida, tente novamente')
+        elif aniversario in meses_que_termina_30dias:
+            print('Data não válida, tente novamente')
+        elif aniversario in meses_que_termina_31dias:
+            print('Data válida, tente novamente')
+        else: 
+            data_válida=True
+
     endereco   =input('Endereço...: ')
     telefone   =input('Telefone...: ')
     celular    =input('Celular....: ')
